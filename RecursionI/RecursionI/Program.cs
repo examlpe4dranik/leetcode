@@ -4,6 +4,7 @@ using RecursionI.ReverseLinkedList;
 using RecursionI.SearchInABinarySearchTree;
 using RecursionI.PascalsTriangleII;
 using RecursionI.FibonacciNumber;
+using RecursionI.ClimbingStairs;
 
 namespace RecursionI
 {
@@ -15,7 +16,8 @@ namespace RecursionI
             //ReverseLinkedList();
             //SearchInABinarySearchTree();
             //PascalsTriangleII();
-            FibonacciNumber();
+            //FibonacciNumber();
+            ClimbingStairs();
 
             Console.Read();
         }
@@ -145,6 +147,20 @@ namespace RecursionI
             Console.WriteLine($"{sol.Fib(5)}");
             Console.WriteLine($"{sol.Fib(6)}");
             Console.WriteLine($"{sol.Fib(7)}");
+        }
+
+        private static void ClimbingStairs()
+        {
+            var sol = new SolutionClimbingStairs();
+
+            Console.WriteLine($"{sol.ClimbStairs(1)}");
+            Console.WriteLine($"{sol.ClimbStairs(2)}");
+            Console.WriteLine($"{sol.ClimbStairs(3)}");
+            Console.WriteLine($"{sol.ClimbStairs(4)}");
+            Console.WriteLine($"{sol.ClimbStairs(5)}");
+            Console.WriteLine($"{sol.ClimbStairs(6)}");
+            Console.WriteLine($"{sol.ClimbStairs(44)}");
+            Console.WriteLine($"{sol.ClimbStairs(45)}");
         }
     }
 }
