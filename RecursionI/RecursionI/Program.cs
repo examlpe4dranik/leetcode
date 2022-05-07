@@ -3,6 +3,7 @@ using RecursionI.SwapNodesInPairs;
 using RecursionI.ReverseLinkedList;
 using RecursionI.SearchInABinarySearchTree;
 using RecursionI.PascalsTriangleII;
+using RecursionI.FibonacciNumber;
 
 namespace RecursionI
 {
@@ -13,7 +14,8 @@ namespace RecursionI
             //SwapNodesInPairs();
             //ReverseLinkedList();
             //SearchInABinarySearchTree();
-            PascalsTriangleII();
+            //PascalsTriangleII();
+            FibonacciNumber();
 
             Console.Read();
         }
@@ -129,6 +131,20 @@ namespace RecursionI
                 }
                 Console.WriteLine();
             }
+        }
+
+        private static void FibonacciNumber()
+        {
+            var sol = new SolutionFibonacciNumber();
+
+            Console.WriteLine($"{sol.Fib(0)}");
+            Console.WriteLine($"{sol.Fib(1)}");
+            Console.WriteLine($"{sol.Fib(2)}");
+            Console.WriteLine($"{sol.Fib(3)}");
+            Console.WriteLine($"{sol.Fib(4)}");
+            Console.WriteLine($"{sol.Fib(5)}");
+            Console.WriteLine($"{sol.Fib(6)}");
+            Console.WriteLine($"{sol.Fib(7)}");
         }
     }
 }
