@@ -1,6 +1,7 @@
 ﻿using System;
 using RecursionI.SwapNodesInPairs;
 using RecursionI.ReverseLinkedList;
+using RecursionI.SearchInABinarySearchTree;
 
 namespace RecursionI
 {
@@ -9,7 +10,8 @@ namespace RecursionI
         private static void Main(string[] args)
         {
             //SwapNodesInPairs();
-            ReverseLinkedList();
+            //ReverseLinkedList();
+            SearchInABinarySearchTree();
 
             Console.Read();
         }
@@ -81,6 +83,25 @@ namespace RecursionI
 
             Console.Write($"{res.val} - {res.next.val} - {res.next.next.val} - {res.next.next.next.val} - {res.next.next.next.next.val}");
 
+        }
+
+        private static void SearchInABinarySearchTree()
+        {
+            var sol = new SolutionSearchInABinarySearchTree();
+
+            var tree = new TreeNode
+            {
+                val = 4,
+                left = new TreeNode
+                {
+                    val = 2,
+                    left = new TreeNode { val = 1 },
+                    right = new TreeNode { val = 3 }
+                },
+                right = new TreeNode { val = 7 }
+            };
+
+            var result = sol.SearchBST(tree, 2);
         }
     }
 }
