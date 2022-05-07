@@ -6,6 +6,7 @@ using RecursionI.PascalsTriangleII;
 using RecursionI.FibonacciNumber;
 using RecursionI.ClimbingStairs;
 using RecursionI.MaximumDepthOfBinaryTree;
+using RecursionI.PowXN;
 
 namespace RecursionI
 {
@@ -19,7 +20,8 @@ namespace RecursionI
             //PascalsTriangleII();
             //FibonacciNumber();
             //ClimbingStairs();
-            MaximumDepthOfBinaryTree();
+            //MaximumDepthOfBinaryTree();
+            PowXN();
 
             Console.Read();
         }
@@ -198,6 +200,21 @@ namespace RecursionI
             };
 
             Console.WriteLine($"{sol.MaxDepth(tree)}");
+        }
+
+        private static void PowXN()
+        {
+            var sol = new SolutionPowXN();
+
+            Console.WriteLine($"{sol.MyPow(2.0, 0)}");
+            Console.WriteLine($"{sol.MyPow(2.0, 10)}");
+            Console.WriteLine($"{sol.MyPow(2.1, 3)}");
+            Console.WriteLine($"{sol.MyPow(2.0, -2)}");
+            Console.WriteLine($"{sol.MyPow(34.00515, -3)}");
+            Console.WriteLine($"{sol.MyPow(0.00001, 2147483647 - 10000)}");
+            Console.WriteLine($"{sol.MyPow(1.0, 2147483647)}");
+            Console.WriteLine($"{sol.MyPow(2.0, -2147483648)}");
+            Console.WriteLine($"{sol.MyPow(-1.0, -2147483648)}");
         }
     }
 }
