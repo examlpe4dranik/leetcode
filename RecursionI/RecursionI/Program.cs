@@ -2,6 +2,7 @@
 using RecursionI.SwapNodesInPairs;
 using RecursionI.ReverseLinkedList;
 using RecursionI.SearchInABinarySearchTree;
+using RecursionI.PascalsTriangleII;
 
 namespace RecursionI
 {
@@ -11,7 +12,8 @@ namespace RecursionI
         {
             //SwapNodesInPairs();
             //ReverseLinkedList();
-            SearchInABinarySearchTree();
+            //SearchInABinarySearchTree();
+            PascalsTriangleII();
 
             Console.Read();
         }
@@ -102,6 +104,31 @@ namespace RecursionI
             };
 
             var result = sol.SearchBST(tree, 2);
+        }
+
+        private static void PascalsTriangleII()
+        {
+            var sol = new SolutionPascalsTriangleII();
+
+            ExecuteTaseCase(sol, 0);
+            ExecuteTaseCase(sol, 1);
+            ExecuteTaseCase(sol, 2);
+            ExecuteTaseCase(sol, 3);
+            ExecuteTaseCase(sol, 4);
+            ExecuteTaseCase(sol, 5);
+            ExecuteTaseCase(sol, 6);
+            ExecuteTaseCase(sol, 7);
+            ExecuteTaseCase(sol, 8);
+
+            static void ExecuteTaseCase(SolutionPascalsTriangleII solution, int rowIndex)
+            {
+                var res = solution.GetRow(rowIndex);
+                foreach (var item in res)
+                {
+                    Console.Write($"{item},");
+                }
+                Console.WriteLine();
+            }
         }
     }
 }
