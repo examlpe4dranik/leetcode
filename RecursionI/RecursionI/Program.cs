@@ -5,6 +5,7 @@ using RecursionI.SearchInABinarySearchTree;
 using RecursionI.PascalsTriangleII;
 using RecursionI.FibonacciNumber;
 using RecursionI.ClimbingStairs;
+using RecursionI.MaximumDepthOfBinaryTree;
 
 namespace RecursionI
 {
@@ -17,7 +18,8 @@ namespace RecursionI
             //SearchInABinarySearchTree();
             //PascalsTriangleII();
             //FibonacciNumber();
-            ClimbingStairs();
+            //ClimbingStairs();
+            MaximumDepthOfBinaryTree();
 
             Console.Read();
         }
@@ -161,6 +163,41 @@ namespace RecursionI
             Console.WriteLine($"{sol.ClimbStairs(6)}");
             Console.WriteLine($"{sol.ClimbStairs(44)}");
             Console.WriteLine($"{sol.ClimbStairs(45)}");
+        }
+
+        private static void MaximumDepthOfBinaryTree()
+        {
+            var sol = new SolutionMaximumDepthOfBinaryTree();
+
+            //var tree = new TreeNode
+            //{
+            //    val = 3,
+            //    left = new TreeNode { val = 9 },
+            //    right = new TreeNode
+            //    {
+            //        val = 20,
+            //        left = new TreeNode { val = 15 },
+            //        right = new TreeNode { val = 7 }
+            //    }
+            //};
+
+            var tree = new TreeNode
+            {
+                val = 3,
+                left = new TreeNode { val = 9 },
+                right = new TreeNode
+                {
+                    val = 20,
+                    left = new TreeNode
+                    {
+                        val = 15,
+                        left = new TreeNode { val = 11 }
+                    },
+                    right = new TreeNode { val = 7 }
+                }
+            };
+
+            Console.WriteLine($"{sol.MaxDepth(tree)}");
         }
     }
 }
