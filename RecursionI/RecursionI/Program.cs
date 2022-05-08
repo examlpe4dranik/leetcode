@@ -1,12 +1,13 @@
-﻿using System;
-using RecursionI.SwapNodesInPairs;
+﻿using RecursionI.ClimbingStairs;
+using RecursionI.FibonacciNumber;
+using RecursionI.MaximumDepthOfBinaryTree;
+using RecursionI.MergeTwoSortedLists;
+using RecursionI.PascalsTriangleII;
+using RecursionI.PowXN;
 using RecursionI.ReverseLinkedList;
 using RecursionI.SearchInABinarySearchTree;
-using RecursionI.PascalsTriangleII;
-using RecursionI.FibonacciNumber;
-using RecursionI.ClimbingStairs;
-using RecursionI.MaximumDepthOfBinaryTree;
-using RecursionI.PowXN;
+using RecursionI.SwapNodesInPairs;
+using System;
 
 namespace RecursionI
 {
@@ -21,7 +22,8 @@ namespace RecursionI
             //FibonacciNumber();
             //ClimbingStairs();
             //MaximumDepthOfBinaryTree();
-            PowXN();
+            //PowXN();
+            MergeTwoSortedLists();
 
             Console.Read();
         }
@@ -51,13 +53,12 @@ namespace RecursionI
                 }
             };
 
-            Console.Write($"{listNode.val} - {listNode.next.val} - {listNode.next.next.val} - {listNode.next.next.next.val} - {listNode.next.next.next.next.val}");
-
+            OutputHelper.Output(listNode);
             Console.WriteLine();
 
             var res = solution.SwapPairs(listNode);
 
-            Console.Write($"{res.val} - {res.next.val} - {res.next.next.val} - {res.next.next.next.val} - {res.next.next.next.next.val}");
+            OutputHelper.Output(res);
         }
 
         private static void ReverseLinkedList()
@@ -85,14 +86,12 @@ namespace RecursionI
                 }
             };
 
-            Console.Write($"{listNode.val} - {listNode.next.val} - {listNode.next.next.val} - {listNode.next.next.next.val} - {listNode.next.next.next.next.val}");
-
+            OutputHelper.Output(listNode);
             Console.WriteLine();
 
             var res = solution.ReverseList(listNode);
 
-            Console.Write($"{res.val} - {res.next.val} - {res.next.next.val} - {res.next.next.next.val} - {res.next.next.next.next.val}");
-
+            OutputHelper.Output(res);
         }
 
         private static void SearchInABinarySearchTree()
@@ -215,6 +214,34 @@ namespace RecursionI
             Console.WriteLine($"{sol.MyPow(1.0, 2147483647)}");
             Console.WriteLine($"{sol.MyPow(2.0, -2147483648)}");
             Console.WriteLine($"{sol.MyPow(-1.0, -2147483648)}");
+        }
+
+        private static void MergeTwoSortedLists()
+        {
+            TestCase(
+                new ListNode { val = 1, next = new ListNode { val = 2, next = new ListNode { val = 4 } } },
+                new ListNode { val = 1, next = new ListNode { val = 3, next = new ListNode { val = 4 } } }
+                );
+
+            TestCase(
+                new ListNode { val = 5 },
+                new ListNode { val = 1, next = new ListNode { val = 3, next = new ListNode { val = 4 } } }
+                );
+
+            static void TestCase(ListNode list1, ListNode list2)
+            {
+                var sol = new SolutionMergeTwoSortedLists();
+
+                OutputHelper.Output(list1);
+                Console.WriteLine();
+                OutputHelper.Output(list2);
+                Console.WriteLine();
+
+                var res = sol.MergeTwoLists(list1, list2);
+
+                OutputHelper.Output(res);
+                Console.WriteLine();
+            }
         }
     }
 }
