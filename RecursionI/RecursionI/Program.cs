@@ -8,6 +8,7 @@ using RecursionI.ReverseLinkedList;
 using RecursionI.SearchInABinarySearchTree;
 using RecursionI.SwapNodesInPairs;
 using RecursionI.KthSymbolInGrammar;
+using RecursionI.UniqueBinarySearchTreesII;
 using System;
 
 namespace RecursionI
@@ -25,7 +26,8 @@ namespace RecursionI
             //MaximumDepthOfBinaryTree();
             //PowXN();
             //MergeTwoSortedLists();
-            KthSymbolInGrammar();
+            //KthSymbolInGrammar();
+            UniqueBinarySearchTreesII();
 
             Console.Read();
         }
@@ -259,6 +261,29 @@ namespace RecursionI
             Console.WriteLine($"{sol.KthGrammar(5, 21)}");
             //Console.WriteLine($"{sol.KthGrammar(8, 1)}");
             //Console.WriteLine($"{sol.KthGrammar(30, 434991989)}");
+        }
+
+        private static void UniqueBinarySearchTreesII()
+        {
+            var sol = new SolutionUniqueBinarySearchTreesII();
+
+            var tree = new TreeNode
+            {
+                val = 3,
+                left = new TreeNode { val = 9 },
+                right = new TreeNode
+                {
+                    val = 20,
+                    left = new TreeNode
+                    {
+                        val = 15,
+                        left = new TreeNode { val = 11 }
+                    },
+                    right = new TreeNode { val = 7 }
+                }
+            };
+
+            OutputHelper.Output(tree);
         }
     }
 }
