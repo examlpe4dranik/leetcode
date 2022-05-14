@@ -1,5 +1,6 @@
 ﻿using RecursionI.ClimbingStairs;
 using RecursionI.FibonacciNumber;
+using RecursionI.KthSymbolInGrammar;
 using RecursionI.MaximumDepthOfBinaryTree;
 using RecursionI.MergeTwoSortedLists;
 using RecursionI.PascalsTriangleII;
@@ -7,7 +8,6 @@ using RecursionI.PowXN;
 using RecursionI.ReverseLinkedList;
 using RecursionI.SearchInABinarySearchTree;
 using RecursionI.SwapNodesInPairs;
-using RecursionI.KthSymbolInGrammar;
 using RecursionI.UniqueBinarySearchTreesII;
 using System;
 
@@ -265,8 +265,6 @@ namespace RecursionI
 
         private static void UniqueBinarySearchTreesII()
         {
-            var sol = new SolutionUniqueBinarySearchTreesII();
-
             var tree = new TreeNode
             {
                 val = 3,
@@ -282,8 +280,14 @@ namespace RecursionI
                     right = new TreeNode { val = 7 }
                 }
             };
-
             OutputHelper.Output(tree);
+
+            var sol = new SolutionUniqueBinarySearchTreesII();
+            var res = sol.GenerateTrees(3);
+            foreach (var tr in res)
+            {
+                OutputHelper.Output(tr);
+            }
         }
     }
 }
