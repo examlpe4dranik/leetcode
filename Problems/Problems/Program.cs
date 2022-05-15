@@ -24,7 +24,7 @@ namespace Problems
         private static void RegisterType()
         {
             var builder = new ContainerBuilder();
-            builder.RegisterType<Solution35>().As<ISolution>();
+            builder.RegisterType<Solution70>().As<ISolution>();
             _container = builder.Build();
         }
     }
