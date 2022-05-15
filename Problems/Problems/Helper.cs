@@ -1,5 +1,6 @@
 ﻿using Problems.Model;
 using System;
+using System.Collections.Generic;
 using System.Linq;
 
 namespace Problems
@@ -27,6 +28,15 @@ namespace Problems
                 Console.Write("-");
                 Output(node.next);
             }
+        }
+
+        public static void Output(IList<int> list)
+        {
+            foreach (var sheet in list)
+            {
+                Console.Write($"{sheet}-");
+            }
+            Console.WriteLine();
         }
     }
 }
