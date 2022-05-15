@@ -7,9 +7,9 @@
     {
         public void Exec()
         {
-            Helper.Out(TwoSum(new int[] { 2, 7, 11, 15 }, 9));
-            Helper.Out(TwoSum(new int[] { 3, 2, 4 }, 6));
-            Helper.Out(TwoSum(new int[] { 3, 3 }, 6));
+            Helper.Output(TwoSum(new int[] { 2, 7, 11, 15 }, 9));
+            Helper.Output(TwoSum(new int[] { 3, 2, 4 }, 6));
+            Helper.Output(TwoSum(new int[] { 3, 3 }, 6));
         }
 
         public int[] TwoSum(int[] nums, int target)
