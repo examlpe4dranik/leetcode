@@ -7,6 +7,11 @@ namespace Problems
 {
     public static class Helper
     {
+        public static void Output(int digit)
+        {
+            Console.WriteLine($"{nameof(digit)}={digit}");
+        }
+
         public static void Output(int[] ar)
         {
             var outstring = ar.ToList().Aggregate(string.Empty, (current, next) => $"{current},{next}");
