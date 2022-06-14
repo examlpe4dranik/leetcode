@@ -7,9 +7,19 @@ namespace Problems
 {
     public static class Helper
     {
+        public static void Output(bool logic)
+        {
+            Console.WriteLine($"{nameof(logic)}={logic}");
+        }
+
         public static void Output(int digit)
         {
             Console.WriteLine($"{nameof(digit)}={digit}");
+        }
+
+        public static void Output(string str)
+        {
+            Console.WriteLine($"{nameof(str)}={str}");
         }
 
         public static void Output(int[] ar)
